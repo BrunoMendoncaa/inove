@@ -6,15 +6,17 @@
     <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
     <title>Login & Inscreva-se</title>
 
+    <!-- FONTES E ESTILOS CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
     
 </head>
 <body>
     <div class="container">
         <div class="forms-container">
-            <div class="signin-signup" id="cab">
+            <div class="signin-signup">
                 <form action="" class="sign-in-form">
                     <h2 class="title">Login</h2>
                     <div class="input-field">
@@ -29,8 +31,12 @@
 
                 </form>
 
-                <form method="POST" action="add.php" class="sign-up-form">
+                <form method="POST" action="php/add.php" class="sign-up-form">
                     <h2 class="title">Criar Usuário</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Nome" name="nome" id="nome">
+                    </div>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" placeholder="Usuário" name="user" id="user">
@@ -49,7 +55,7 @@
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Senha" name="senha" id="senha">
+                        <input type="password" placeholder="Senha" name="pass" id="pass">
                     </div>
                     <input type="submit" value="Criar Usuário" class="btn-solid">
 
@@ -72,8 +78,8 @@
             <div class="panel right-panel">
                 <div class="content">
                     <h3>Junte-se</h3>
-                    <p>As aplicações da Inove + são disponibilidazadas para membros devidamente autorizados. Crie</p>
-                    <button class="btn-solid" id="sign-in-btn">Logar</button>
+                    <p>As aplicações da Inove + são disponibilidazadas para membros devidamente autorizados. Caso já tenha um usuário acesse a plataforma.</p>
+                    <button class="btn-solid" id="sign-in-btn">Login</button>
                 </div>
 
                 <img src="img/desk.svg" class="image" alt="Imagem logo">
