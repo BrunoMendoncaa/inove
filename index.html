@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="forms-container">
-            <div class="signin-signup">
+            <div class="signin-signup" id="cab">
                 <form action="" class="sign-in-form">
                     <h2 class="title">Login</h2>
                     <div class="input-field">
@@ -29,26 +29,27 @@
 
                 </form>
 
-                <form action="" class="sign-up-form">
+                <form method="POST" action="add.php" class="sign-up-form">
                     <h2 class="title">Criar Usuário</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Usuário">
+                        <input type="text" placeholder="Usuário" name="user" id="user">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-desktop"></i>
-                        <select required class="select-opt">
+                        <select required class="select-opt" name="setor" id="setor">
                             <option value="" disabled selected>Selecione o Setor</option>
                             <option value="panagon">PANAGON</option>
                             <option value="demanda">DEMANDA</option>
-                            <option value="ilog">LANBACEN</option>
+                            <option value="ilog">ILOG</option>
                             <option value="lanbacen">LANBACEN</option>
                             <option value="ajuizamento">AJUIZAMENTO</option>
+                            <option value="inove">INOVE+</option>
                         </select>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Senha">
+                        <input type="password" placeholder="Senha" name="senha" id="senha">
                     </div>
                     <input type="submit" value="Criar Usuário" class="btn-solid">
 
