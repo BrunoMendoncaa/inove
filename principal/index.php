@@ -3,7 +3,7 @@
     if($_SESSION == NULL){
         header('location: ../index.php');
     }
-    echo "<p><h3>BEM-VINDO, " . $_SESSION['nome'] . "</h3></p><br>";
+    echo "<p><h3>BEM-VINDO, " . $_SESSION['nome'] . "</h3></p>";
     //print_r($_SESSION);
 ?>
 <!DOCTYPE html>
@@ -15,10 +15,29 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <style>
+        .btn-solid {
+        width: 100px;
+        background-color: #5995fd;
+        border: none;
+        outline: none;
+        height: 29px;
+        border-radius: 49px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 10px 0;
+        cursor: pointer;
+        transition: 0.5s;
+        
+        display: block;
+  }
+    </style>
+    
 </head>
 <body>
     <form method="POST" action="../php/sair.php">
-        <input type="submit" value="sair">
+        <input type="submit" value="sair" class="btn-solid"></p>
     </form>
     <header>
         
