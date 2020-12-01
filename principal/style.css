@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+header {
+    width: 100px;
+    height: 50px;
+}
+.menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: 24px;
+    border-bottom: #6D736F 1px solid;
+    width: 63vh;
+}
+
+.menu ul li {
+    list-style: none;
+    margin: 0 20px;
+    transition: 2s;
+}
+
+.menu ul li a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 18px;
+    font-family: 'Gugi', cursive;
+    color: #000;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.menu ul:hover li a {
+    transform: scale(1.4);
+    opacity: .4;
+    filter: blur(2px);
+}
+
+.menu ul li a:hover {
+    transform: scale(2);
+    opacity: 1;
+    filter: blur(0);
+    color: #ffffff;
+}
+
+.menu ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1E4C57;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleY(0);
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.menu ul li a:hover:before {
+    transition: 0.5s;
+    transform-origin: top;
+    transform: scaleY(1);
+}
+
+/*Cards da Page*/
+
+.container {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 130px;
+    margin-bottom: 140px;
+}
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    
+    margin-bottom: 30px;
+}
+
+.container .card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.container .card .face.face1 {
+    background:#1785A2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform-origin: bottom;
+}
+
+.container .card .face.face.face1 img {
+    max-width: 100px;
+    display:block;
+}
+
+.container .card .face.face1 h2 {
+    margin: 10px 0 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2 .content a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container .card:hover .face.face1 {
+    transform: translateY(-100%) rotateX(90deg);
+    background: #1E4C57;
+}
+
+.container .card .face.face2 {
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card:hover .face.face2 {
+    transform: translateY(0) rotateX(0deg);
+}
+
+.container .card .face.face2 .content p {
+    font-family: 'Kite One', sans-serif;
+}
+
+/*FOOTER*/
+
+.footer {
+    background: #1E4C57 ;
+    color: #d3d3d3;
+    height: 100%;
+    position: relative;
+}
+
+.footer .footer-content {
+    height: 390px;
+    padding: 25px;
+    display: flex;
+}
+
+.footer .footer-section.links {
+    margin-left: 40px;
+}
+
+.footer .footer-content .links ul a {
+    width: 94px;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+.footer .footer-content .links ul a:hover {
+    color: #69cf66;
+    margin-left: 10px;
+    transition: all .3s;
+}
+
+.footer .footer-bottom {
+    background: #6D736F ;
+    color: #b4b4b4;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: top 20px;
+    font-family: 'Gugi', cursive;
+}
+
+.footer .footer-content .footer-section {
+    flex: 1;
+    
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2 {
+    color: white;
+    font-family: 'Gugi', cursive;
+}
+
+.footer .footer-content .about h1 span {
+    color: #69cf66;
+    font-family: 'Gugi', cursive;
+}
+
+.footer .footer-content .about .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.footer .footer-content .about .socials a {
+    border: 1px solid gray;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+    transition: all 3s;
+}
+
+.footer .footer-content .about .socials a:hover {
+    border:  1px solid white;
+    transition: all 3s;
+}
+
+.footer .footer-content .footer-section.about .socials i {
+    color:#69cf66;
+}
+
+.footer .footer-content .footer-section.about .socials i:hover {
+    color: #479b44;
+}
+
+.footer-section.contact.form img{
+    width: 100%;
+    height: 230px;
+}

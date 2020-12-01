@@ -22,30 +22,32 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="" class="sign-in-form">
+                <form method="POST" action="php/login.php" class="sign-in-form">
                     <h2 class="title">Login</h2>
                     <?php
                         if ($_SESSION != NULL){
                             if($_SESSION['cadastro'] == 'invalido'){
-                                echo "<fieldset style='background-color:red;color:white;padding:5px;margin-bottom:5px;border:1px solid black;border-radius:10px'><b>Usuario já cadastrado!</b></fieldset>";
+                                echo "<fieldset style='background-color:#FF6B6B;color:white;padding:5px;margin-bottom:5px;border:1px solid black;border-radius:10px'><b>Usuario já cadastrado!</b></fieldset>";
                             }elseif($_SESSION['cadastro'] == 'sucesso'){
-                                echo "<fieldset style='background-color:green;color:white;padding:5px;margin-bottom:5px;border:1px solid black;border-radius:10px'><b>Usuario cadastrado com sucesso!</b></fieldset>";
+                                echo "<fieldset style='background-color:#1DD1A1;color:white;padding:5px;margin-bottom:5px;border:1px solid black;border-radius:10px'><b>Usuario cadastrado com sucesso!</b></fieldset>";
+                            }elseif($_SESSION['cadastro'] == 'errado'){
+                                echo "<fieldset style='background-color:#FF6B6B;color:white;padding:5px;margin-bottom:5px;border:1px solid black;border-radius:10px'><b>Usuario e/ou senha invalido!</b></fieldset>";
                             }
                         }
-                    ?>
+                    ?>  
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Usuário">
+                        <input type="text" placeholder="Usuário" name="user" id="user" required=''>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Senha">
+                        <input type="password" placeholder="Senha" name="pass" id="pass" required=''>
                     </div>
                     <input type="submit" value="Login" class="btn-solid">
 
                 </form>
 
-                <form method="POST" action="php/add.php" class="sign-up-form">
+                <form method="POST" action="php/processar.php" class="sign-up-form">
                     <h2 class="title">Criar Usuário</h2>
         
                     <div class="input-field">
@@ -103,5 +105,6 @@
     </div>
 
     <script src="app.js"></script>
+    
 </body>
 </html>
