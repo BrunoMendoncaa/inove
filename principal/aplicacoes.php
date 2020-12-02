@@ -34,7 +34,6 @@
     
 </head>
 <body>
-    
     <header>
         
     </header>
@@ -50,7 +49,22 @@
     </div>
 
 
+    <div class="container">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="novos/panagon.png" alt="">
+                        <h2>PESQUISA CB01'</h2>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <a href="../pesquisa/index.php"><h2>ABRIR<h2></a>
+                    </div>
+                </div>
+            </div>
 
+    </div>
 
      <!-- Site footer -->
      <div class="footer">
