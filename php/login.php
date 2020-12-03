@@ -21,7 +21,7 @@
     if($sql->rowcount() > 0){
         // Logado com sucesso.
         $_SESSION['user'] = $user;
-
+        $_SESSION['msg'] = 'nao';
 
         header('location: ../principal/index.php');
         

@@ -29,7 +29,11 @@
         transition: 0.5s;
         
         display: block;
-  }
+        box-shadow: 5px 5px 5px black;
+        }
+        .btn-solid:hover{
+            background-color: blue;
+        }
     </style>
     
 </head>
@@ -59,7 +63,7 @@
                 </div>
                 <div class="face face2">
                     <div class="content">
-                        <a href="../pesquisa/index.php"><h2>ABRIR<h2></a>
+                        <a style="text-align:center;padding:2px;" class="btn-solid" href="../pesquisa/index.php">ABRIR</a>
                     </div>
                 </div>
             </div>
