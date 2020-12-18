@@ -1,6 +1,7 @@
 <?php
     session_start();
     session_destroy();
+    $_SESSION['cadastro'] = "";
 ?>
 
 <!DOCTYPE html>
@@ -27,11 +28,47 @@
                     <?php
                         if ($_SESSION != NULL){
                             if($_SESSION['cadastro'] == 'invalido'){
-                                echo "<fieldset style='background-color:#FF6B6B;color:white;padding:5px;margin-bottom:5px;border:1px solid black;border-radius:10px'><b>Usuario já cadastrado!</b></fieldset>";
+                                $txt = "";
+
+                                $txt .= "<fieldset style='";
+                                $txt .= "background-color: #FF6B6B;";
+                                $txt .= "color: white;";
+                                $txt .= "padding: 5px;";
+                                $txt .= "margin-bottom: 5px;";
+                                $txt .= "border: 1px solid black;";
+                                $txt .= "border-radius: 10px;'>";
+                                $txt .= "<b>Usuário já cadastrado!</b>";
+                                $txt .= "</fieldset>";
+
+                                echo $txt;
                             }elseif($_SESSION['cadastro'] == 'sucesso'){
-                                echo "<fieldset style='background-color:#1DD1A1;color:white;padding:5px;margin-bottom:5px;border:1px solid black;border-radius:10px'><b>Usuario cadastrado com sucesso!</b></fieldset>";
+                                $txt = "";
+
+                                $txt .= "<fieldset style='";
+                                $txt .= "background-color: #1DD1A1;";
+                                $txt .= "color: white;";
+                                $txt .= "padding: 5px;";
+                                $txt .= "margin-bottom: 5px;";
+                                $txt .= "border: 1px solid black;";
+                                $txt .= "border-radius: 10px;'>";
+                                $txt .= "<b>Usuário cadastrado com sucesso!</b>";
+                                $txt .= "</fieldset>";
+                                
+                                echo $txt;
                             }elseif($_SESSION['cadastro'] == 'errado'){
-                                echo "<fieldset style='background-color:#FF6B6B;color:white;padding:5px;margin-bottom:5px;border:1px solid black;border-radius:10px'><b>Usuario e/ou senha invalido!</b></fieldset>";
+                                $txt = "";
+
+                                $txt .= "<fieldset style='";
+                                $txt .= "background-color: #FF6B6B;";
+                                $txt .= "color: white;";
+                                $txt .= "padding: 5px;";
+                                $txt .= "margin-bottom: 5px;";
+                                $txt .= "border: 1px solid black;";
+                                $txt .= "border-radius: 10px;'>";
+                                $txt .= "<b>Usuário e/ou senha inválido(s)!</b>";
+                                $txt .= "</fieldset>";
+                                
+                                echo $txt;
                             }
                         }
                     ?>  
@@ -47,7 +84,7 @@
 
                 </form>
 
-                <form method="POST" action="php/processar.php" class="sign-up-form">
+                <form method="GET" action="php/cadastrar.php" class="sign-up-form">
                     <h2 class="title">Criar Usuário</h2>
         
                     <div class="input-field">

@@ -64,7 +64,7 @@
                     </div>
                     <div class="screen-body-item">
                     
-                    <form method="POST" action="../php/msg.php">
+                    <form method="POST" action="#">
                             <div class="app-form">
                                 <div class="app-form-group">
                                     <input type="text" class="app-form-control" name="nome" id="nome" placeholder="NOME" required="">

@@ -102,7 +102,7 @@
                 <h2>Contate-nos</h2>
                 <br>
                 <p>Contate-nos clicando no formulário:</p>
-                <a href="form.html"><img src="img/form-removebg-preview.png" alt=""></a>
+                <a href="form.php"><img src="img/form-removebg-preview.png" alt=""></a>
             </div>
 
         </div>
